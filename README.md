@@ -191,3 +191,11 @@ MIT License – See `LICENSE` file for details.
 - Special recognition to our beta testers and enterprise partners.
 
 ---
+## Note: This file has not been fully tested yet
+This file may encounter issues during certain scans or under specific conditions. If you notice any problems or bugs, please report them using one of the following methods:
+
+Submit a Pull Request if you have a solution to fix the issue.
+
+- **Send an email to**: [my Email](mahdi.ghourchi.me@gmail.com).
+
+Any feedback or suggestions for improving this file are highly appreciated. Thank you for your cooperation!
