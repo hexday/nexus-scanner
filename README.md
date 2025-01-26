@@ -64,7 +64,6 @@ A modern, extensible, and robust security scanning tool for web applications and
 │
 ├── tests/
 ├── config/
-├── docs/
 ├── main.py                     # Application entry point
 └── requirements.txt            # Dependency list
 ```
