@@ -1,0 +1,133 @@
+# Nexus Security Scanner Configuration
+
+version: "1.0"
+
+scanner:
+  threads: 4
+  max_depth: 3
+  timeout: 30
+  retry_count: 3
+  user_agent: "Nexus Security Scanner v1.0"
+  follow_redirects: true
+  verify_ssl: true
+
+rules:
+  enabled:
+    - xss_detection
+    - sql_injection
+    - open_ports
+    - ssl_check
+    - header_security
+  severity_levels:
+    - CRITICAL
+    - HIGH
+    - MEDIUM
+    - LOW
+    - INFO
+
+reporting:
+  formats:
+    - json
+    - html
+    - pdf
+  include_metadata: true
+  screenshots: true
+  evidence_collection: true
+  retention_days: 30
+
+api:
+  host: "0.0.0.0"
+  port: 8080
+  rate_limit: 100
+  timeout: 60
+  cors_origins:
+    - "http://localhost:3000"
+    - "https://nexus-dashboard.local"
+
+authentication:
+  enabled: true
+  jwt_secret: "change_this_in_production"
+  token_expiry: 3600
+  allowed_ips:
+    - "127.0.0.1"
+    - "::1"
+
+logging:
+  level: INFO
+  file: "logs/nexus.log"
+  max_size: 10MB
+  backup_count: 5
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+cache:
+  enabled: true
+  backend: "redis"
+  ttl: 3600
+  max_size: 1000MB
+  connection:
+    host: "localhost"
+    port: 6379
+    db: 0
+
+notifications:
+  enabled: true
+  channels:
+    slack:
+      webhook_url: ""
+      channel: "#security"
+    email:
+      smtp_host: "smtp.company.com"
+      smtp_port: 587
+      from_address: "nexus@company.com"
+
+storage:
+  type: "local"
+  path: "data/scans"
+  backup:
+    enabled: true
+    frequency: "daily"
+    retention: 30
+
+integrations:
+  jira:
+    enabled: false
+    url: ""
+    project: ""
+    issue_type: "Security"
+  github:
+    enabled: false
+    token: ""
+    repository: ""
+
+performance:
+  max_memory: "2GB"
+  cpu_limit: 80
+  disk_quota: "10GB"
+  temp_cleanup: true
+
+custom_rules:
+  path: "rules/custom"
+  auto_reload: true
+  validation: true
+
+proxy:
+  enabled: false
+  http: ""
+  https: ""
+  no_proxy:
+    - "localhost"
+    - "127.0.0.1"
+
+plugins:
+  directory: "plugins"
+  auto_load: true
+  allowed_types:
+    - "scanner"
+    - "reporter"
+    - "notifier"
+
+development:
+  debug: false
+  profiling: false
+  hot_reload: false
+  test_mode: false

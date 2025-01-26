@@ -1,0 +1,139 @@
+# Nexus Theme Configuration
+
+version: "1.0"
+
+themes:
+  default:
+    name: "Default"
+    colors:
+      primary: "#007bff"
+      secondary: "#6c757d"
+      success: "#28a745"
+      danger: "#dc3545"
+      warning: "#ffc107"
+      info: "#17a2b8"
+      background: "#ffffff"
+      text: "#212529"
+    severity_colors:
+      CRITICAL: "#ff0000"
+      HIGH: "#ff4500"
+      MEDIUM: "#ffa500"
+      LOW: "#4682b4"
+      INFO: "#008000"
+    fonts:
+      primary: "Roboto"
+      monospace: "Source Code Pro"
+      sizes:
+        small: "12px"
+        medium: "14px"
+        large: "16px"
+        header: "24px"
+
+  dark:
+    name: "Dark Mode"
+    colors:
+      primary: "#0d6efd"
+      secondary: "#495057"
+      success: "#198754"
+      danger: "#dc3545"
+      warning: "#ffc107"
+      info: "#0dcaf0"
+      background: "#212529"
+      text: "#f8f9fa"
+    severity_colors:
+      CRITICAL: "#ff1a1a"
+      HIGH: "#ff6347"
+      MEDIUM: "#ffd700"
+      LOW: "#87ceeb"
+      INFO: "#90ee90"
+    fonts:
+      primary: "Roboto"
+      monospace: "Fira Code"
+      sizes:
+        small: "12px"
+        medium: "14px"
+        large: "16px"
+        header: "24px"
+
+  terminal:
+    name: "Terminal"
+    colors:
+      primary: "#00ff00"
+      secondary: "#808080"
+      success: "#00ff00"
+      danger: "#ff0000"
+      warning: "#ffff00"
+      info: "#00ffff"
+      background: "#000000"
+      text: "#00ff00"
+    severity_colors:
+      CRITICAL: "#ff0000"
+      HIGH: "#ff4500"
+      MEDIUM: "#ffff00"
+      LOW: "#00ffff"
+      INFO: "#00ff00"
+    fonts:
+      primary: "Ubuntu Mono"
+      monospace: "Ubuntu Mono"
+      sizes:
+        small: "12px"
+        medium: "14px"
+        large: "16px"
+        header: "20px"
+
+  high_contrast:
+    name: "High Contrast"
+    colors:
+      primary: "#ffffff"
+      secondary: "#ffffff"
+      success: "#ffffff"
+      danger: "#ffffff"
+      warning: "#ffffff"
+      info: "#ffffff"
+      background: "#000000"
+      text: "#ffffff"
+    severity_colors:
+      CRITICAL: "#ffffff"
+      HIGH: "#ffffff"
+      MEDIUM: "#ffffff"
+      LOW: "#ffffff"
+      INFO: "#ffffff"
+    fonts:
+      primary: "Arial"
+      monospace: "Courier New"
+      sizes:
+        small: "14px"
+        medium: "16px"
+        large: "18px"
+        header: "26px"
+
+animations:
+  enabled: true
+  duration:
+    fast: "0.2s"
+    normal: "0.3s"
+    slow: "0.5s"
+  transitions:
+    default: "ease"
+    smooth: "ease-in-out"
+    sharp: "linear"
+
+icons:
+  set: "material"
+  size:
+    small: "16px"
+    medium: "24px"
+    large: "32px"
+  severity:
+    CRITICAL: "error_outline"
+    HIGH: "warning"
+    MEDIUM: "info"
+    LOW: "help_outline"
+    INFO: "check_circle_outline"
+
+responsive:
+  breakpoints:
+    mobile: "576px"
+    tablet: "768px"
+    desktop: "992px"
+    wide: "1200px"
