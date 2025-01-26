@@ -76,7 +76,7 @@ A modern, extensible, and robust security scanning tool for web applications and
 Install the Nexus Security Scanner via pip:
 
 ```bash
-pip install nexus-scanner
+python setup.py install 
 ```
 
 ---
