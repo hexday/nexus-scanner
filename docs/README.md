@@ -173,9 +173,9 @@ We welcome contributions from the security and developer community!
 
 ## Support
 
-- **Documentation**: [Full Docs](https://docs.nexus-scanner.io)
-- **Community**: [Join Discord](https://discord.gg/nexus)
-- **Issues**: [GitHub Issues](https://github.com/hexday/nexus)
+
+- **Community**: [Join Discord](https://t.me/nexusscann)
+- **Issues**: [GitHub Issues](https://github.com/hexday/nexus-scanner)
 
 ---
 
